@@ -9,7 +9,7 @@ const PAGES_LINKING = {
       title: "Animation",
       icon: "img/icons/animation.png",
       link: "https://drive.google.com/file/d/1YldDrx-HJftgoJ7PxzZvMXlyFz1lD9qE/preview",
-      type: "video",
+      type: "iframe",
       size: "850x480",
     },
   ],
