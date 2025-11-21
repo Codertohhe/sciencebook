@@ -1,49 +1,544 @@
-@media screen and (max-width: 600px) {
-	.bookmarkIcon {
-		right: 25px;
-	}
-	body.fixed-sidebar.mini-navbar #page-wrapper {
-		margin-top: 70px;
-	}
-	.fancybox-slide {
-		width: unset;
-		height: unset;
-	}
-	#popupVideo {
-		width: 360px;
-		padding: 5px;
-	}
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    overflow: visible !important;
+    height: 100%;
+  }
+  .bookmarkIcon {
+    right: 5px;
+    top: 70px
+  }
+  body.fixed-sidebar.mini-navbar #page-wrapper {
+    margin-top: 70px;
+  }
+  .fancybox-slide {
+    width: unset;
+    height: unset;
+  }
+  #popupVideo {
+    width: 360px;
+    padding: 5px;
+  }
 
-	.jp-video {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-	}
+  .jp-video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 
-	.jp-video .jp-type-single {
-		width: 100% !important;
-	}
+  .jp-video .jp-type-single {
+    width: 100% !important;
+  }
 
-	.jp-interface {
-		box-sizing: border-box;
-		width: 100%;
-	}
+  .jp-interface {
+    box-sizing: border-box;
+    width: 100%;
+  }
 
-	.jp-video .jp-controls-holder {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 360px;
-	}
-	.jp-video .jp-type-single .jp-controls {
-		margin: 0;
-	}
-	.fancybox-slider {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.fancybox-slide {
-		position: unset;
-	}
+  .jp-video .jp-controls-holder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 360px;
+  }
+  .jp-video .jp-type-single .jp-controls {
+    margin: 0;
+  }
+  .fancybox-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fancybox-slide {
+    position: unset;
+  }
+
+  /* .regionPos {
+    width: 35px;
+    height: 35px;
+    z-index: 999;
+    position: absolute;
+  } */
+
+  /* .regionPos img {
+    width: 50%;
+    height: auto;
+    position: static;
+  } */
+  /* .parihar {
+  pointer-events: none;
+  z-index: 9999; 
+} */
+
+/* Footer responsive adjustments (only for small screens) */
+@media (max-width: 767px) {
+  .footer.footer_icons {
+    padding: 6px 8px;
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.08);
+  }
+
+  /* Keep the overall footer content spaced, but make the left button group horizontally scrollable */
+  .footer-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 8px;
+  }
+
+  /* Left side: icons should scroll horizontally on small screens */
+  .footer-content-wrapper .left-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* important: prevent wrapping so scrolling works */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    gap: 6px;
+    padding-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  /* Right container stays fixed (pagination / controls) */
+  .footer-content-wrapper .footer-right-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .footer-content-wrapper button,
+  .footer-content-wrapper .dropup,
+  .footer-content-wrapper .pagination-wrapper {
+    margin: 4px 6px;
+    flex: 0 0 auto;
+  }
+
+  .footer-content-wrapper .pagination-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Ensure pagination pill and adjacent buttons stay on the same line on small screens */
+  .footer-content-wrapper .pagination-wrapper {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  .footer-content-wrapper .pagination-wrapper .head_text {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .footer-content-wrapper .footer-right-btn-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* scale icons down on small screens */
+  .btn-img {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* hide elements meant only for large screens */
+  /* NOTE: commented out so icons marked `visible-lg-inline-block` are still shown on mobile.
+    If you want only some controls hidden on mobile, add a specific class like `.hide-on-mobile`
+    to those elements and target that class here instead. */
+  /* .visible-lg-inline-block { display: none !important; } */
+  .pgNo { display: none !important; }
+  .page-search-input { width: 48px; }
+
+  /* Optional: hide native scrollbar but keep scrolling usable */
+  .footer-content-wrapper .left-btns::-webkit-scrollbar { height: 6px; }
+  .footer-content-wrapper .left-btns::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
 }
+  /* .app-logo img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+  } */
+
+  .app-logo {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    border-radius:0 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  #right-nav button .fa {
+    font-size: 22px;
+    padding: 25px 10px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    top: -14px;
+  }
+  #btn-skip,
+  #btn-play_video {
+    display: inline-block;
+    z-index: 99999;
+    border: 8px #a6cefe solid;
+    color: #f5f5f5;
+    height: 62px;
+    width: 62px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 80px;
+    background-image: radial-gradient(#a5e1ff, #5460dc);
+  }
+  #button_area {
+    width: 50%;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+    left: 27%;
+  }
+
+  /* #right-nav {
+    position: fixed;
+    background: #d9f0fa00 url(../img/trackbg.png) repeat-x;
+    left: -20px;
+    width: 76%;
+    height: 10%;
+    bottom: 0;
+    z-index: 100;
+    background-position: bottom center;
+    margin: 0 0px 0 220px;
+    left: 6%;
+  } */
+
+  .prev_next_buttons button {
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: 1px transparent solid;
+    color: #2fa2d3;
+    font-size: 48px;
+    /* margin-top: -48px; */
+    /* z-index: 99; */
+  }
+  .new_logo img {
+    max-width: 68%;
+    /* margin-right: 573px;  */
+    /* padding-top: 0px; */
+    padding: 15px 0 0 0;
+    /* border-radius: 25px; its use only santi logo */
+  }
+  .navbar-fixed-top,
+  .navbar-static-top {
+    background: #cac289;
+    height: 9.5%;
+  }
+  .jp-video .jp-toggles {
+    position: absolute;
+    /* right:16px; */
+    margin: 10px 0 0;
+    width: 100px;
+    left: 0;
+  }
+  .jp-jplayer {
+    background-color: #000;
+    display: contents;
+  }
+
+  /* for small screens Fancy video player - lesson animation iframe */
+  /* For small screens Fancy video player - lesson animation iframe */
+  .fancybox-content {
+    width: 95vw !important;
+    height: 85vh !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    overflow: auto !important; /* Added */
+  }
+
+  .fancybox-iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .fancybox-content {
+      width: 100vw !important;
+      height: 100vh !important;
+      overflow: auto !important; /* Added */
+    }
+  }
+  footer {
+    background: #7ba305;
+    height: auto;
+    padding: 5px 10px;
+    border-top: 3px #fff solid;
+    display: block;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: -29px;
+  }
+  .dragndrop-options ul {
+    margin: 0;
+    padding: 3px 20px;
+    list-style: none;
+    display: inline-block;
+    background: #fff;
+    border: 3px #07b3d6 solid;
+    border-radius: 5px;
+    position: relative;
+    top: -25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fancybox-slider {
+    transform: none !important;
+  }
+
+  .fancybox-slide--current {
+    transform: translate(0px, 0px) !important;
+    margin: 0 auto !important;
+  }
+  .dropdown-alerts{
+    margin-left: -8rem !important;
+  }
+  .dropdown-alerts li a div{
+    /* border: 2px solid red; */
+    width: 100%;
+    /* display: flex; */
+    /* white-space: none; */
+  }
+  .navbar-top-links .dropdown-menu li a div{
+    white-space: inherit;
+  }
+}
+@media screen and (max-width: 1410px) {
+  #right-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    background: #d9f0fa url(../img/trackbg.png) repeat-x bottom center;
+    padding: 8px 0;
+    z-index: 99999999;
+  }
+
+  .bottom-toolbar-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+
+  #engine {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  #engine button {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    /* background-color: #4fa2d9; */
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  #engine button i {
+    pointer-events: none;
+  }
+
+  /* Optional: Show scroll bar */
+  .bottom-toolbar-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .bottom-toolbar-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .bottom-toolbar-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+/* Hide toggle on desktop */
+.icon-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide by default */
+  .shortBarMenu {
+    background-color: red;
+    display: none !important;
+    flex-direction: row; /* horizontal icons */
+    gap: 8px;
+    position: absolute !important;
+    right: 10px;
+    top: 40px;
+    background: transparent !important;
+    border: none;
+    padding: 5px;
+    z-index: 9999;
+    list-style: none;
+    margin: 0;
+    width: auto !important;
+    box-shadow: none;
+  }
+
+  /* Show when toggled */
+  .shortBarMenu.show {
+    display: flex !important;
+    left: 18%;
+  }
+
+  .shortBarMenu li {
+    margin: 0 !important;
+    padding: 0;
+    flex: 0 0 auto; /* no stretching */
+  }
+
+  .shortBarMenu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px; /* fixed circle size */
+    height: 42px;
+    background: #fff; /* white background */
+    color: #000;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .shortBarMenu i {
+    font-size: 18px;
+  }
+
+  .shortBarMenu .label {
+    font-size: 10px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 1px 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    position: relative; /* makes it the anchor */
+  }
+
+  .icon-menu-toggle {
+    display: block;
+    position: absolute;
+    right: 10px; /* fixed distance from the right edge */
+    top: 20px;
+    z-index: 10000;
+  }
+  .pagination-wrapper {
+    margin-right: 20px;
+  }
+  .nav-second-level li{
+    background-color: #E5D2C0;
+  }
+}
+
+/* .mobile-search-icon,
+.mobile-search-input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .searchDiv {
+    display: none !important;
+  }
+
+
+  .mobile-search-icon {
+    display: flex;
+    align-items: center;
+    padding: 33px 0px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+  }
+ 
+ 
+  .mobile-search-input {
+    display: none;
+    background: #fff;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-search-input form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .mobile-search-input input {
+    flex: 1;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    outline: none;
+  }
+} */
+
+/* Force footer icons visible on small screens and override inline/display:none rules */
+@media (max-width: 767px) {
+  .footer.footer_icons .left-btns,
+  .footer.footer_icons .left-btns button,
+  .footer.footer_icons .footer-right-btn-container,
+  .footer.footer_icons .footer-right-btn-container button,
+  .footer.footer_icons .btn-img {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .footer.footer_icons .left-btns {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    gap: 6px;
+  }
+
+  .footer.footer_icons .left-btns > * {
+    flex: 0 0 auto !important;
+    margin: 0 6px !important;
+  }
+}
+

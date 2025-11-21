@@ -98,9 +98,36 @@ div#app-preloader {
 
 .preloader-container {
   text-align: center;
-  margin-top: 130px;
+  margin-top: 20px;
 }
-
+@media screen and (max-width: 600px) {
+  .preloader-container {
+  text-align: center;
+  position: absolute;
+  top: -10px;
+  left: -220px;
+  height: 100%;
+}
+.app-logo img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+.app-logo {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40PX;
+  width: 90px;
+  background-color: white;
+  border-radius: 0 2rem 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+}
 .notes-fixicon {
   position: absolute;
   top: 5%;
@@ -770,6 +797,8 @@ button {
 .bookOnlyPreview .footer {
   display: none;
 }
+
+
 
 .bookOnlyPreview #wrapper {
   margin-top: 0px;

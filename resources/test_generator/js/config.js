@@ -1,468 +1,469 @@
-var tgTitle = "Hindi Book";
+var tgTitle = "Science Book";
 var treeStructure = ["class", "chapter", "type"];
 var imagePath = "img/q_img/";
 
 var questions = [
   // MCQ Qustions
+  // {
+  //   excel_id: "english6",
+  //   class: "Class - 1",
+  //   subject: "",
+  //   book: " Class - 1",
+  //   chapter: "1. Parts of a Plant",
+  //   type: "Multiple choice questions",
+  //   answer: ["ii"],
+  //   difficulty: "M",
+  //   outcome: "Understand",
+  //   mark: 1,
+  //   question: {
+  //     title: "A. Tick (&#10003;) the correct sentences.",
+  //     option: [
+  //       "Gappu and Gunnu woke up after the storm and went for a walk.",
+  //       "i. Decimal Number System",
+  //       "ii. Binary Number System",
+  //       "iii. Octal Number System",
+  //       "iv. None of these",
+  //     ],
+  //     image: "",
+  //   },
+  // },
+
+  // True or False Questions
   {
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["ii"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Tick (&#10003;) the correct sentences.",
-  option: [
-  "Gappu and Gunnu woke up after the storm and went for a walk.",
-  "i &#10003;",
-  "ii &#10005;",
-  
-
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Write True or False",
+    answer: ["F"],
+    difficulty: "E",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Write T if the statement is True and F if it is False.",
+      option: [
+        "Human beings, plants and animals are living things. <br> (i) T <br> (ii) F ",
+      ],
+      image: "",
+    },
   },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["i"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Tick (&#10003;) the correct sentences.",
-  option: [
-  "They found a huge tree lying on the railway track.",
-  "i &#10003;",
-  "ii &#10005;",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["i"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Tick (&#10003;) the correct sentences.",
-  option: [
-  "They met Golu the signalman near the railway track.",
-  "i &#10003;",
-  "ii &#10005;",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["ii"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Tick (&#10003;) the correct sentences.",
-  option: [
-  "Golu tried to cut the tree into pieces.",
-  "i &#10003;",
-  "ii &#10005;",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["i"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Tick (&#10003;) the correct sentences.",
-  option: [
-  "In the end, Gajraj the elephant moved the tree.",
-  "i &#10003;",
-  "ii &#10005;",
-  
-
-  ],
-  image: "",
-  },
-}, 
-
-
-
-
-
-
-
-
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["ii"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Who said these words? Write Gappu, Gunnu or Golu.",
-  option: [
-  "It is so cold. I will go to sleep.",
-  "i Gappu",
-  "ii Gunnu",
-  "iii Golu",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["i"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Who said these words? Write Gappu, Gunnu or Golu.",
-  option: [
-  "Let’s go for a walk.",
-  "i Gappu",
-  "ii Gunnu",
-  "iii Golu",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["ii"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Who said these words? Write Gappu, Gunnu or Golu.",
-  option: [
-  "Let us all try together.",
-  "i Gappu",
-  "ii Gunnu",
-  "iii Golu",
-  
-
-  ],
-  image: "",
-  },
-}, 
-{
-excel_id: "english6",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Multiple choice questions",
-  answer: ["i"],
-  difficulty: "E",
-  outcome: "Understand",
-  mark: 1,
-  question: {
-  title: "Who said these words? Write Gappu, Gunnu or Golu.",
-  option: [
-  "Let us go to Gajraj.",
-  "i Gappu",
-  "ii Gunnu",
-  "iii Golu",
-  
-
-  ],
-  image: "",
-  },
-}, 
-
-
-
-
-
-
-
-{
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Answer these questions in one sentence each.",
-  option: [
-  "What did Gappu and Gunnu see on their walk? <br/><br/>____________________________________________________</br>",
-  ],
-  image: "",
-  },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Answer these questions in one sentence each.",
-  option: [
-  "Why were they worried? <br/><br/>____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Write True or False",
+    answer: ["F"],
+    difficulty: "E",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Write T if the statement is True and F if it is False.",
+      option: ["Living things do not have babies. <br> (i) T <br> (ii) F "],
+      image: "",
+    },
   },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Answer these questions in one sentence each.",
-  option: [
-  "Whom did Gappu and Gunnu first go to for help? <br/><br/>____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Write True or False",
+    answer: ["F"],
+    difficulty: "E",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Write T if the statement is True and F if it is False.",
+      option: [
+        "Non-living things need to breathe in air to stay alive. <br> (i) T <br> (ii) F ",
+      ],
+      image: "",
+    },
   },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Answer these questions in one sentence each.",
-  option: [
-  "What idea did Gunnu have? <br/><br/>____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Write True or False",
+    answer: ["F"],
+    difficulty: "E",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Write T if the statement is True and F if it is False.",
+      option: ["Non-living things do not need food. <br> (i) T <br> (ii) F  "],
+      image: "",
+    },
   },
-  }, 
-   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "1. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Answer these questions in one sentence each.",
-  option: [
-  "Why did they all clap with joy? <br/><br/>____________________________________________________</br>",
-  ],
-  image: "",
+  {
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Write True or False",
+    answer: ["F"],
+    difficulty: "E",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Write T if the statement is True and F if it is False.",
+      option: [
+        "All living things move in some way or the other. <br> (i) T <br> (ii) F ",
+      ],
+      image: "",
+    },
   },
-  }, 
 
-
-
-
-
-
-
-
-  //// ch_2
-
-
-
+  // Fill in the blanks
 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Match the Following",
-  answer: ["Hello Cave! </br> the lion’s footprints. </br> inside the cave. </br> a cave. </br> ran away. </br> answered the jackal."],
-  difficulty: "M",
-  outcome: "Remember",
-  mark: 1,
-  question: {
-  title: "Match the columns to make sentences about the story.",
-  option: [
-  "1. The hungry lion saw <br/> 2. The lion hid </br> 3. The jackal saw </br> 4. The jackal shouted </br> 5. The foolish lion </br> 6. The jackal heard the lion and",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Fill in the blanks",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Fill in the blanks by unscrambling the words given in brackets. ",
+      option: [
+        "The ___________ is an important part of the shoot system. (METS)",
+      ],
+      image: "",
+    },
   },
-  }, 
-
-
-
-
-
-
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Complete the sentences to answer the questions.",
-  option: [
-  "Why was the lion hungry? <br/> The lion was hungry because he <br/> ____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Fill in the blanks",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Fill in the blanks by unscrambling the words given in brackets. ",
+      option: [
+        "Trees have strong, thick and hard stems called __________. (KUTRNS)",
+      ],
+      image: "",
+    },
   },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Complete the sentences to answer the questions.",
-  option: [
-  "Why did the lion hide in the cave? <br/> The lion hid in the cave to wait for <br/> ____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Fill in the blanks",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Fill in the blanks by unscrambling the words given in brackets. ",
+      option: ["Leaves give out a gas called __________. (YNXGOE)"],
+      image: "",
+    },
   },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Complete the sentences to answer the questions.",
-  option: [
-  "What did the jackal see outside the cave? <br/> The jackal saw <br/>  ____________________________________________________ outside the cave.</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Fill in the blanks",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Fill in the blanks by unscrambling the words given in brackets. ",
+      option: [
+        "The ___________  absorbs the sunlight needed to make food for the plant. (LCOHOPLYRLH)",
+      ],
+      image: "",
+    },
   },
-  }, 
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Complete the sentences to answer the questions.",
-  option: [
-  "How did the jackal trick the lion? <br/>The jackal tricked the lion by calling out to <br/> ____________________________________________________</br> He asked the cave why it did not </br> ____________________________________________________</br>",
-  ],
-  image: "",
+    excel_id: "english6",
+    class: "Class - 7",
+    subject: "",
+    book: "Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Fill in the blanks",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Understand",
+    mark: 1,
+    question: {
+      title: "Fill in the blanks by unscrambling the words given in brackets. ",
+      option: [
+        "The process of growth of a plant from a seed is called __________. (RNEMIOGAINT)",
+      ],
+      image: "",
+    },
   },
-  }, 
+
+  // Short answer type questions
   {
-  excel_id: "english1",
-  class: "Class - 1",
-  subject: "",
-  book: " Class - 1",
-  chapter: "2. One Stormy Day",
-  type: "Short answer type questions",
-  answer: ["Do it Youself."],
-  difficulty: "H",
-  outcome: "Apply",
-  mark: 1,
-  question: {
-  title: "Complete the sentences to answer the questions.",
-  option: [
-  "How was the lion tricked by the jackal? <br/>The lion thought the cave did not reply because <br/> _________________________________ </br> ____________________________________________________ </br> So he answered the jackal. </br> Then the jackal knew that </br> ____________________________________________________",
-  ],
-  image: "",
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Short answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Define the following terms.",
+      option: [
+        "root system   <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
   },
-  }, 
-  
-
-
-
-
-
-
-]
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Short answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Define the following terms.",
+      option: [
+        " shoot system     <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Short answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Define the following terms.",
+      option: [
+        " leaf blade     <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Short answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Define the following terms.",
+      option: [
+        "germination  <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  // Long answer type questions
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "Define living things. Describe any two features of living things. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "Define non-living things. Describe any two features of non-living things. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "How do living things breathe? Name and explain the organs they use. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "1. Living and Non-living Things",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        " All living things move in some way or the other. Explain. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "Name the two main types of roots. Explain with examples. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "State the functions of the stem. Name some plants whose stems store extra food. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        " What is a leaf? Describe its features and explain how it makes food for the plant. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        "How do flowers help the plant? Explain. <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+  {
+    excel_id: "english1",
+    class: "Class - 7",
+    subject: "",
+    book: " Class - 7",
+    chapter: "2. Parts of a Plant",
+    type: "Long answer type questions",
+    answer: [""],
+    difficulty: "M",
+    outcome: "Apply",
+    mark: 1,
+    question: {
+      title: "Answer these questions.",
+      option: [
+        " What are seeds? Give examples. Explain the process of germination.  <br/><br/>____________________________________________________</br>",
+      ],
+      image: "",
+    },
+  },
+];

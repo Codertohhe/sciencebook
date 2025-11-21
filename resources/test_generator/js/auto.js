@@ -142,33 +142,39 @@ function addToTestAuto(selectedQuestions) {
 
   chr = 0;
   questionChars = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
   ];
+
+
+  // char = 0;
+  // questionChars =[
+    
+  // ]
 
   for (var o in filterArr) {
     filterArr[o].ID.push(
@@ -178,9 +184,29 @@ function addToTestAuto(selectedQuestions) {
       )
     );
 
-    $("#pdfPreview #sContainIn").append(
-      '<h2 id = "main_Head" class =' + filterArr[o].ID + "_h2></h2>"
-    );
+
+
+
+    // $("#pdfPreview #sContainIn").append(
+    //   '<h2 id = "main_Head" class =' + filterArr[o].ID + "_h2></h2>"
+    // );
+
+
+let cleanTitle = filterArr[o].type.trim().split(" ").join("_");
+
+
+let fullClass = filterArr[o].ID + "_" + cleanTitle + "_h2";
+
+
+$("#pdfPreview #sContainIn").append(
+  '<h2 id="main_Head" class="' + fullClass + '">' + filterArr[o].type + "</h2>"
+);
+
+
+
+
+
+
 
     for (var index = 0; index < filterArr[o].Finalarr.length; index++) {
       $("#pdfPreview #sContainIn").append(
@@ -195,20 +221,22 @@ function addToTestAuto(selectedQuestions) {
         //if(k == 0){chr = '1';}else{
         //}
 
-        $(
-          "#" +
-            filterArr[o].ID +
-            "_" +
-            filterArr[o].Finalarr[index].split(" ").join("_")
-        ).append(
-          "<div style='display:flex;justify-content:space-between;'><h3 style='width:90%;'>" +
-            questionChars[chr] +
-            ". &nbsp; &nbsp;" +
-            filterArr[o].FinalTitle[k] +
-            "</h3><h3 class='outcomeText'>" +
-            filterArr[o].outcome[k] +
-            "</h3></div>"
-        );
+         $(
+  "#" +
+    filterArr[o].ID +
+    "_" +
+    filterArr[o].Finalarr[index].split(" ").join("_")
+).append(
+  "<div style='display:flex;justify-content:space-between;'>" +
+    "<h3 style='width:90%;' class='parihar-num'>" +
+      questionChars[chr] +
+      ". <span class='parihar'>" +
+      filterArr[o].FinalTitle[k] +
+      "</span>" +
+    "</h3>" +
+  "</div>"
+);
+
 
         chr = nextChar(chr);
         totalCat_marks = 0;
@@ -327,7 +355,7 @@ function showPreviewAuto() {
         totalMarks += parseInt(spcMark);
 
         var $marks = $('<div class="marksPreview"></div>').html(
-          "[Marks: " + spcMark + "]"
+          "" + spcMark 
         );
         $(this).replaceWith($marks);
       });
@@ -604,20 +632,30 @@ position: relative;\
 margin-top: 7px;min-height: 22px;}\
 .question-parent.selection{\
 }\
-.numbering {float: left;}\
+.numbering {float: left; margin-left: 2rem; padding-left:2rem;}\
 .marksDiv{float: right; widht: 25px;}\
 </style>";
 
+
+
+
+
+
 function printStudent() {
   $("#previewHTML .question-answer").hide();
+
+
+
   if (typeof appjs != "object") {
     if (isFirefox) {
-      //exportPDFKendo('student');
+      exportPDFKendo('student');
       printCommand();
     } else {
       printCommand();
     }
-  } else {
+    
+  } 
+  else {
     if (preservemyHTML == "") {
       preservemyHTML = $("#previewHTML").html();
     }
@@ -625,13 +663,15 @@ function printStudent() {
     $("#previewHTML .question-answer").remove();
     devilzgetpdf(style + $("#previewHTML").html());
   }
+
 }
+
 
 function printTeacher() {
   $("#previewHTML .question-answer").show();
   if (typeof appjs != "object") {
     if (isFirefox) {
-      //exportPDFKendo('teacher');
+      exportPDFKendo('teacher');
       printCommand();
     } else {
       printCommand();

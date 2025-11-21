@@ -427,6 +427,36 @@ var readerApp = {
 		$("#book").turn("page", pageNum + 2);
 	},
 
+	/**
+	 * Open two pages side-by-side (double page view).
+	 * Accepts logical page numbers (1-based excluding prePages), like readerApp.turnPage.
+	 * Example: readerApp.openTwoPages(4,5) will open pages 4 and 5 in double mode.
+	 */
+	openTwoPages: function (pageA, pageB) {
+		if (isNaN(pageA) || isNaN(pageB)) return false;
+		var left = Math.min(parseInt(pageA, 10), parseInt(pageB, 10));
+		// convert to actual page index including prePages
+		var actual = left + appdb.config.prePages.length;
+
+		// ensure book is in double display mode
+		try {
+			$("#book").turn("display", "double");
+			eBookConfig.mode = "double";
+			// navigate to the left page of the spread
+			$("#book").turn("page", actual);
+			// update UI and sizing
+			resizeBook();
+			// show correct toggle icons: show "multi on" (double) and hide "multi off" (single)
+			$("#toggle_multi_on").show();
+			$("#toggle_multi_off").hide();
+			this.setPageNumBack();
+			return true;
+		} catch (e) {
+			console.error("openTwoPages error:", e);
+			return false;
+		}
+	},
+
 	invalidPage: function (pageNum) {
 		if (pageNum > 0 && pageNum <= eBookConfig.total) {
 			return false;
@@ -507,7 +537,8 @@ var readerApp = {
 		remove: function () {
 			$("#takeBookmark").removeClass("booked");
 			var bookmarksList = readerApp.bookmark.get();
-			var bookmarkIndex = bookmarksList.indexOf(eBookConfig.current);
+			var currentPage = $("#book").turn("view")[0];
+			var bookmarkIndex = bookmarksList.indexOf(currentPage);
 			if (bookmarkIndex == -1) {
 				console.log("Error! Bookmark not available.");
 			} else {
@@ -526,6 +557,28 @@ var readerApp = {
 			}
 
 			readerApp.bookmark.initialize();
+		},
+
+		removeSpecific: function (pageNumber) {
+			var bookmarksList = readerApp.bookmark.get();
+			var bookmarkIndex = bookmarksList.indexOf(pageNumber);
+			if (bookmarkIndex !== -1) {
+				bookmarksList.splice(bookmarkIndex, 1);
+				if (bookmarksList.length == 0) {
+					readerApp.storage.del(appdb.config.id + "_bookmark");
+				} else {
+					bookmarksList.sort(function (a, b) {
+						return a - b;
+					});
+					readerApp.storage.set(
+						appdb.config.id + "_bookmark",
+						JSON.stringify(bookmarksList)
+					);
+				}
+				readerApp.bookmark.initialize();
+				// Update the bookmark icon if current page bookmark was removed
+				readerApp.bookmark.presentui();
+			}
 		},
 
 		action: function () {
@@ -567,18 +620,20 @@ var readerApp = {
 				var bookingHTML = "";
 				for (var i = 0; i < bookmarksList.length; i++) {
 					bookingHTML +=
-						'<li>\
+						'<li style="display: flex; justify-content: space-between; align-items: center;">\
                             <a href="#" onClick="readerApp.turnPage(' +
 						(bookmarksList[i] - appdb.config.prePages.length) +
-						')">\
+						')" style="flex-grow: 1;">\
                                 <div>\
                                     <i class="fa fa-chevron-right fa-fw"></i> Page ' +
 						(bookmarksList[i] - appdb.config.prePages.length) +
 						"\
                                 </div>\
                             </a>\
+                            <button onclick=\"readerApp.bookmark.removeSpecific(" + bookmarksList[i] + ")\" class=\"btn btn-xs btn-danger\" style=\"margin-left: 10px; padding: 2px 6px;\" title=\"Delete bookmark\">\
+                                <i class=\"fa fa-trash\"></i>\
+                            </button>\
                         </li>";
-					$container.html(bookingHTML);
 				}
 				$container.html(bookingHTML);
 				$("#bookmark-container li:eq(0)").before("<h4>Bookmarks</h4>");

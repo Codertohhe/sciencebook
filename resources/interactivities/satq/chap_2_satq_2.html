@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../../../css/tailwind.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow-y: auto; /* Enables scrolling */
+      }
+    </style>
+    <script src="./js/satq.js"></script>
+    <script>
+      const questions = [
+        "Name the two main types of roots. Explain with examples.",
+        "State the functions of the stem. Name some plants whose stems store extra food.",
+        "What is a leaf? Describe its features and explain how it makes food for the plant.",
+        "How do flowers help the plant? Explain.",
+        "What are seeds? Give examples. Explain the process of germination.",
+      ];
+      function resetAnswers() {
+        const answers = document.querySelectorAll(".answer");
+        answers.forEach((ans) => {
+          ans.value = "";
+        });
+        document.getElementById("audio-intro").play();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-col gap-5 px-4 mx-auto max-w-4xl font-Conv_trebucbd">
+      <header class="py-2">
+        <img class="mx-auto" src="../img/heading-bg.png" alt="" />
+      </header>
+      <main class="flex flex-col gap-5 items-start">
+        <h1 class="text-xl text-[purple] font-semibold">
+          F. Answer these questions.
+        </h1>
+        <ol id="questions-list" class="flex flex-col gap-4 px-10 w-full"></ol>
+      </main>
+      <footer class="flex gap-2 justify-end">
+        <button
+          class="py-2 px-4 bg-[url(../resources/interactivities/img/button-bg.png)] bg-center bg-no-repeat bg-contain hover:bg-[url(../resources/interactivities/img/button-bg-hover.png)] min-w-24 font-semibold text-lg print:hidden"
+          onclick="resetAnswers()"
+        >
+          Reset
+        </button>
+        <button
+          class="py-2 px-4 bg-[url(../resources/interactivities/img/button-bg.png)] bg-center bg-no-repeat bg-contain hover:bg-[url(../resources/interactivities/img/button-bg-hover.png)] min-w-24 font-semibold text-lg print:hidden"
+          onclick="window.print()"
+        >
+          Print
+        </button>
+      </footer>
+    </div>
+
+    <div class="hide">
+      <audio style="display: none !important" controls id="audio-intro">
+        <source src="audio/ch_2_2.mp3" type="audio/mp3" />
+      </audio>
+
+      <audio id="audio-clap">
+        <source src="../../audio/welldone.wav" type="audio/wav" />
+      </audio>
+    </div>
+  </body>
+</html>

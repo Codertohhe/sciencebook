@@ -26,10 +26,12 @@ $(document).ready(function (e) {
       $("#afm-type-input").hide();
     }
   });
+
   /*$.mCustomScrollbar.defaults.theme="light-2"; //set "light-2" as the default theme
 	$("#container").mCustomScrollbar({
 		axis:"yx"
 	});*/
+
   $treeview = $("#collectionList #container");
 
   $treeview.append($("#treeTemplate").html());
@@ -39,6 +41,7 @@ $(document).ready(function (e) {
       multiple: false,
     },
   });
+
   $treeview.jstree("open_all");
 
   $treeview.on("open_node.jstree", function (e, data) {
@@ -533,32 +536,32 @@ function addToTest() {
 
   chr = 0;
   questionChars = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
   ];
 
   for (var o in filterArr) {
@@ -573,6 +576,8 @@ function addToTest() {
       '<h2 id = "main_Head" class =' + filterArr[o].ID + "_h2></h2>"
     );
 
+    
+
     for (var index = 0; index < filterArr[o].Finalarr.length; index++) {
       $("#pdfPreview #sContainIn").append(
         '<div class = "main_Div" id =' +
@@ -586,20 +591,22 @@ function addToTest() {
         //if(k == 0){chr = '1';}else{
         //}
 
-        $(
-          "#" +
-            filterArr[o].ID +
-            "_" +
-            filterArr[o].Finalarr[index].split(" ").join("_")
-        ).append(
-          "<div style='display:flex;justify-content:space-between;'><h3 style='width:90%;'>" +
-            questionChars[chr] +
-            ". &nbsp; &nbsp;" +
-            filterArr[o].FinalTitle[k] +
-            "</h3><h3 class='outcomeText'>" +
-            filterArr[o].outcome[k] +
-            "</h3></div>"
-        );
+       $(
+  "#" +
+    filterArr[o].ID +
+    "_" +
+    filterArr[o].Finalarr[index].split(" ").join("_")
+).append(
+  "<div style='display:flex;justify-content:space-between;'>" +
+    "<h3 style='width:90%;' class='manually-ques'>" +
+      questionChars[chr] +
+      "- &nbsp; <span class='parihar'>" +
+      filterArr[o].FinalTitle[k] +
+      "</span>" +
+    "</h3>" +
+  "</div>"
+);
+
 
         chr = nextChar(chr);
         totalCat_marks = 0;
@@ -860,10 +867,87 @@ function nextChar(c) {
   return chr;
 }
 
+// function setNumbering() {
+//   var ind = 0;
+//   var numbering = 1;
+//   var chr = "a";
+//   var numnew = 1;
+//   $("#pdfPreview").each(function (i, e) {
+//     var prev_chp = "";
+//     var prev_typ = "";
+//     var prev_title = "";
+
+//     $(this)
+//       .find(".sContainIn")
+//       .each(function (i, e) {
+//         var tit = "<h3>" + $(this).find("h3").html() + "</h3>";
+
+//         var len = $(this).find(".question-parent").length;
+//         if (len > 1) {
+//           var cc = 1;
+//           $(this)
+//             .find(".question-parent")
+//             .each(function (i, e) {
+//               var chp = $(this).attr("data-chapter");
+//               var typ = $(this).attr("data-type");
+//               var title = $(this).attr("data-title");
+//               //console.log('chp:'+chp+ ' prev_chp:'+prev_chp + 'typ:'+typ+ ' prev_typ:'+prev_typ + 'num:'+numbering);
+//               //console.log(prev_title, title, prev_typ, typ, ' typ');
+
+//               if (
+//                 /*(prev_chp != chp) || */ prev_typ != typ ||
+//                 prev_title != title
+//               ) {
+//                 numbering = 1;
+//                 //if(cc != 1){$(this).before(tit);}
+//               }
+//               prev_chp = chp;
+//               prev_typ = typ;
+//               prev_title = title;
+
+//               var id = parseInt($(this).attr("id"));
+
+//               //console.log(allQuestions({id: id}).first().question, ' gggggggg');
+
+//               if (
+//                 allQuestions({ id: id }).first().question.image != "" ||
+//                 allQuestions({ id: id }).first().question.image == "no_img"
+//               )
+//                 $(this).find("label.numbering").html(" ");
+//               else
+//                 $(this)
+//                   .find("label.numbering")
+//                   .html(numbering + ".");
+
+//               //if(numbering == 1){chr = 'a';}else{chr = nextChar(chr);}
+//               //$(this).find('label.numbering').html(chr + '.');
+//               numbering++;
+//               cc++;
+//             });
+//         }
+
+//         $(this)
+//           .find("h3")
+//           .each(function (i, e) {
+//             /*var tit1 = $(this).html();
+// 				var myarr = tit1.split(".");
+// 				newStr= tit1.replace(myarr[0], numnew);
+// 				$(this).html(newStr);
+// 				numnew++;*/
+//           });
+//       });
+//   });
+// }
+
 function setNumbering() {
   var ind = 0;
   var numbering = 1;
-  var chr = "a";
+var hindiConsonants = [
+  "a","b","c","d","e","f","g","h","i","j","k","l","m",
+  "n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+  var chr = "A";
   var numnew = 1;
   $("#pdfPreview").each(function (i, e) {
     var prev_chp = "";
@@ -884,15 +968,9 @@ function setNumbering() {
               var chp = $(this).attr("data-chapter");
               var typ = $(this).attr("data-type");
               var title = $(this).attr("data-title");
-              //console.log('chp:'+chp+ ' prev_chp:'+prev_chp + 'typ:'+typ+ ' prev_typ:'+prev_typ + 'num:'+numbering);
-              //console.log(prev_title, title, prev_typ, typ, ' typ');
 
-              if (
-                /*(prev_chp != chp) || */ prev_typ != typ ||
-                prev_title != title
-              ) {
+              if (prev_typ != typ || prev_title != title) {
                 numbering = 1;
-                //if(cc != 1){$(this).before(tit);}
               }
               prev_chp = chp;
               prev_typ = typ;
@@ -900,20 +978,21 @@ function setNumbering() {
 
               var id = parseInt($(this).attr("id"));
 
-              //console.log(allQuestions({id: id}).first().question, ' gggggggg');
-
               if (
                 allQuestions({ id: id }).first().question.image != "" ||
                 allQuestions({ id: id }).first().question.image == "no_img"
-              )
+              ) {
                 $(this).find("label.numbering").html(" ");
-              else
+              } else {
+                // Hindi consonant with simple repetition after 33
+                var consonantIndex = (numbering - 1) % hindiConsonants.length;
+                var finalConsonant = hindiConsonants[consonantIndex];
+                
                 $(this)
                   .find("label.numbering")
-                  .html(numbering + ".");
+                  .html(finalConsonant + ".  ");
+              }
 
-              //if(numbering == 1){chr = 'a';}else{chr = nextChar(chr);}
-              //$(this).find('label.numbering').html(chr + '.');
               numbering++;
               cc++;
             });
@@ -995,8 +1074,8 @@ function insertQuestion($container, ids) {
         maxlength: 2,
         onkeydown: "return numValidate(event)",
       });
-      $('<div id="marksDiv-id" class="marksDiv"></div>')
-        .append("<span>Marks</span>")
+      $('<div id="marksDiv-id" class="marksDiv">Marks:</div>')
+        .append("<span class='ques-marks'></span>")
         .append($inpMarks)
         .appendTo($div);
     }
@@ -1108,47 +1187,27 @@ function insertQuestion($container, ids) {
     $opts.appendTo($div);
 
     if (r.answer != "" && r.answer != null) {
+      var $ans = $('<div class="question-answer rx-editable"></div>');
+      
       if (Object.prototype.toString.call(r.answer) === "[object Array]") {
-        // $ans = $('<div class="question-answer rx-editable"></div>').html('<div class="ansHeading">Gllej:</div>');
-        $ans = $('<div class="question-answer rx-editable"></div>').html(
-          '<div class="ansHeading">Answer:</div>'
-        );
-
-        if (r.answer.length == 1) {
-          var z = 0;
-          var optnameii = r.answer[z];
-          if (
-            optnameii.indexOf(".jpg") != -1 ||
-            optnameii.indexOf(".png") != -1
-          ) {
-            optnameii =
-              "<img class='ansImg' src='" + imagePath + r.answer[z] + "'>";
+        var answerHtml = '<span class="ansHeading" style="display:inline-block">Answer: &nbsp;</span>';
+        for (var z = 0; z < r.answer.length; z++) {
+          var answerText = r.answer[z];
+          if (answerText.indexOf(".jpg") != -1 || answerText.indexOf(".png") != -1) {
+            answerText = "<img class='ansImg' src='" + imagePath + answerText + "'>";
           }
-          optnameii = optnameii.split("^").join("-");
-          $ans.append("<span class='simp-ans-text'>" + optnameii + "</span>");
-        } else {
-          for (var z = 0; z < r.answer.length; z++) {
-            var optnameii = r.answer[z];
-            if (
-              optnameii.indexOf(".jpg") != -1 ||
-              optnameii.indexOf(".png") != -1
-            ) {
-              optnameii =
-                "<img class='ansImg' src='" + imagePath + r.answer[z] + "'>";
-            }
-            optnameii = optnameii.split("^").join("-");
-            $ans.append("<span class='simp-ans-text'>" + optnameii + "</span>");
-
-            //$ans.append('<div>' + String.fromCharCode(65+z) + '. ' + r.answer[z] + '</div>');
+          answerText = answerText.split("^").join("-");
+          if (z > 0) {
+            answerHtml += ', ';
           }
+          answerHtml += '<span class="simp-ans-text">' + answerText + '</span>';
         }
-        $ans.appendTo($div);
+        $ans.html(answerHtml);
       } else {
-        $('<div class="question-answer rx-editable"></div>')
-          //   .html('<div class="ansHeading">Gllej:</div> ' + r.answer)
-          .html('<div class="ansHeading">Answer:</div> ' + r.answer)
-          .appendTo($div);
+        $ans.html('<span class="ansHeading" style="display:inline-block">Answer: &nbsp;</span>&nbsp;<span class="simp-ans-text">' + r.answer + '</span>');
       }
+      
+      $ans.appendTo($div);
     }
 
     $div.append(
@@ -1165,152 +1224,152 @@ function insertQuestion($container, ids) {
 
     var $tools = $('<div class="mx-tools"></div>').appendTo($div);
 
-    $('<a href="javascript:void(0)"></a>')
-      .html("Replace")
-      .attr({ class: "tool-replace" })
-      .click(function (i, e) {
-        if ($(this).attr("disabled") == "disabled") {
-          return false;
-        }
-        var replacerId = $(this).parent().parent().attr("id");
-        //var oldQuery = JSON.parse(queryTrack[replacerId]);
-        $("#replaceList").empty();
-        var $quesContainer = $(this).parent().parent();
-        var subject = $quesContainer.attr("data-subject");
-        var chapter = $quesContainer.attr("data-chapter");
-        var topic = $quesContainer.attr("data-topic");
-        var type = $quesContainer.attr("data-type");
+    // $('<a href="javascript:void(0)"></a>')
+    //   .html("Replace")
+    //   .attr({ class: "tool-replace" })
+    //   .click(function (i, e) {
+    //     if ($(this).attr("disabled") == "disabled") {
+    //       return false;
+    //     }
+    //     var replacerId = $(this).parent().parent().attr("id");
+    //     //var oldQuery = JSON.parse(queryTrack[replacerId]);
+    //     $("#replaceList").empty();
+    //     var $quesContainer = $(this).parent().parent();
+    //     var subject = $quesContainer.attr("data-subject");
+    //     var chapter = $quesContainer.attr("data-chapter");
+    //     var topic = $quesContainer.attr("data-topic");
+    //     var type = $quesContainer.attr("data-type");
 
-        //console.log('subject: ' + subject + ' chapter: ' + chapter + ' topic: ' + topic + ' type: ' + type);
-        var oldQuery = new Object();
-        if (type != undefined) oldQuery["type"] = type;
-        if (topic != undefined) oldQuery["topic"] = topic;
-        if (chapter != undefined) oldQuery["chapter"] = chapter;
-        if (subject != undefined) oldQuery["subject"] = subject;
+    //     //console.log('subject: ' + subject + ' chapter: ' + chapter + ' topic: ' + topic + ' type: ' + type);
+    //     var oldQuery = new Object();
+    //     if (type != undefined) oldQuery["type"] = type;
+    //     if (topic != undefined) oldQuery["topic"] = topic;
+    //     if (chapter != undefined) oldQuery["chapter"] = chapter;
+    //     if (subject != undefined) oldQuery["subject"] = subject;
 
-        var totalQuestion = allQuestions(oldQuery);
-        //alert('Total Question: ' + totalQuestion.count());
-        var counter = 0;
-        totalQuestion.each(function (r) {
-          if ($.inArray(String(r.id), testBank) == -1) {
-            counter++;
-            {
-              var $div = $('<div class="question-parent"></div>').attr({
-                id: "fib",
-                "data-type": r.type,
-                "data-cid": r.id,
-              });
-              var $checkbox = $("<input/>").attr({
-                type: "checkbox",
-                id: "check" + counter,
-              });
+    //     var totalQuestion = allQuestions(oldQuery);
+    //     //alert('Total Question: ' + totalQuestion.count());
+    //     var counter = 0;
+    //     totalQuestion.each(function (r) {
+    //       if ($.inArray(String(r.id), testBank) == -1) {
+    //         counter++;
+    //         {
+    //           var $div = $('<div class="question-parent"></div>').attr({
+    //             id: "fib",
+    //             "data-type": r.type,
+    //             "data-cid": r.id,
+    //           });
+    //           var $checkbox = $("<input/>").attr({
+    //             type: "checkbox",
+    //             id: "check" + counter,
+    //           });
 
-              $checkbox.appendTo($div).click(function (e) {
-                var curIndex = testBank.indexOf(String(replacerId));
-                //testBank.splice(curIndex, 1);
-                //testBank.push(String(r.id));
-                testBank[curIndex] = String(r.id);
-                $("#replaceQuestion").hide();
-                $("#explorer").empty();
-                addToTest();
-              });
-              var $opts;
-              for (var q in r.question) {
-                console.log(type, " answer");
-                if (q == "title") {
-                  $('<div class="question-title"></div>')
-                    .html(counter + ". " + r.question.title)
-                    .appendTo($div);
-                } else if (q == "image") {
-                  if (r.question.image != undefined && r.question.image != "") {
-                    var qimagepathblob = imagePath + r.question.image;
-                    if (r.question.image.indexOf("blob:") == 0) {
-                      qimagepathblob = r.question.image;
-                    }
-                    $('<div class="image"></div>')
-                      .html('<img src="' + qimagepathblob + '"/>')
-                      .appendTo($div);
-                  }
-                } else if (q == "option") {
-                  $opts = $('<div class="options"></div>');
-                  if (r.type.toLowerCase() == "mtf") {
-                    var optnameii =
-                      "<br><table border='1' cellspacing='0' cellpadding='0'>";
-                    for (
-                      var mtfIndex = 0;
-                      mtfIndex < r.question.option.length;
-                      mtfIndex++
-                    ) {
-                      var optnameiis = r.question.option[mtfIndex];
-                      var mtfoption = optnameiis.split(" ^ ");
+    //           $checkbox.appendTo($div).click(function (e) {
+    //             var curIndex = testBank.indexOf(String(replacerId));
+    //             //testBank.splice(curIndex, 1);
+    //             //testBank.push(String(r.id));
+    //             testBank[curIndex] = String(r.id);
+    //             $("#replaceQuestion").hide();
+    //             $("#explorer").empty();
+    //             addToTest();
+    //           });
+    //           var $opts;
+    //           for (var q in r.question) {
+    //             console.log(type, " answer");
+    //             if (q == "title") {
+    //               $('<div class="question-title"></div>')
+    //                 .html(counter + ". " + r.question.title)
+    //                 .appendTo($div);
+    //             } else if (q == "image") {
+    //               if (r.question.image != undefined && r.question.image != "") {
+    //                 var qimagepathblob = imagePath + r.question.image;
+    //                 if (r.question.image.indexOf("blob:") == 0) {
+    //                   qimagepathblob = r.question.image;
+    //                 }
+    //                 $('<div class="image"></div>')
+    //                   .html('<img src="' + qimagepathblob + '"/>')
+    //                   .appendTo($div);
+    //               }
+    //             } else if (q == "option") {
+    //               $opts = $('<div class="options"></div>');
+    //               if (r.type.toLowerCase() == "mtf") {
+    //                 var optnameii =
+    //                   "<br><table border='1' cellspacing='0' cellpadding='0'>";
+    //                 for (
+    //                   var mtfIndex = 0;
+    //                   mtfIndex < r.question.option.length;
+    //                   mtfIndex++
+    //                 ) {
+    //                   var optnameiis = r.question.option[mtfIndex];
+    //                   var mtfoption = optnameiis.split(" ^ ");
 
-                      optnameii +=
-                        "<tr><td>" +
-                        mtfoption[0] +
-                        "</td><td>" +
-                        mtfoption[1] +
-                        "</td></tr>";
-                    }
-                    optnameii += "</table>";
+    //                   optnameii +=
+    //                     "<tr><td>" +
+    //                     mtfoption[0] +
+    //                     "</td><td>" +
+    //                     mtfoption[1] +
+    //                     "</td></tr>";
+    //                 }
+    //                 optnameii += "</table>";
 
-                    $('<div class="option rx-editable"></div>')
-                      .html(optnameii)
-                      .appendTo($opts);
-                  } else {
-                    if (r.question.option.length == 1) {
-                      var z = 0;
-                      var optnameii = r.question.option[z];
-                      if (
-                        optnameii.indexOf(".jpg") != -1 ||
-                        optnameii.indexOf(".png") != -1
-                      ) {
-                        optnameii =
-                          "<img class='see' src='" +
-                          imagePath +
-                          r.question.option[z] +
-                          "'>";
-                      }
-                      $('<div class="question-title"></div>')
-                        .html(optnameii)
-                        .appendTo($opts);
-                    } else {
-                      for (var z = 0; z < r.question.option.length; z++) {
-                        //$('<div class="option rx-editable"></div>').html(String.fromCharCode(65+z) + '. ' + r.question.option[z]).appendTo($opts);
+    //                 $('<div class="option rx-editable"></div>')
+    //                   .html(optnameii)
+    //                   .appendTo($opts);
+    //               } else {
+    //                 if (r.question.option.length == 1) {
+    //                   var z = 0;
+    //                   var optnameii = r.question.option[z];
+    //                   if (
+    //                     optnameii.indexOf(".jpg") != -1 ||
+    //                     optnameii.indexOf(".png") != -1
+    //                   ) {
+    //                     optnameii =
+    //                       "<img class='see' src='" +
+    //                       imagePath +
+    //                       r.question.option[z] +
+    //                       "'>";
+    //                   }
+    //                   $('<div class="question-title"></div>')
+    //                     .html(optnameii)
+    //                     .appendTo($opts);
+    //                 } else {
+    //                   for (var z = 0; z < r.question.option.length; z++) {
+    //                     //$('<div class="option rx-editable"></div>').html(String.fromCharCode(65+z) + '. ' + r.question.option[z]).appendTo($opts);
 
-                        var optnameii = r.question.option[z];
-                        if (
-                          optnameii.indexOf(".jpg") != -1 ||
-                          optnameii.indexOf(".png") != -1
-                        ) {
-                          optnameii =
-                            "<img class='see' src='" +
-                            imagePath +
-                            r.question.option[z] +
-                            "'>";
-                        }
-                        //console.log(optnameii);
-                        $('<div class="question-title"></div>')
-                          .html(optnameii)
-                          .appendTo($opts);
-                      }
-                    }
-                  }
-                }
-              }
-              $opts.appendTo($div);
-              $('<div class="clear"></div>').appendTo($div);
-              $("#replaceList").append($div);
-            }
-          }
-        });
-        $("#replaceQuestion").show();
-        if ($("#replaceList").is(":empty")) {
-          $("#replaceList").html(
-            '<div style="text-align: center; line-height: 300px;">No, similar questions available.</div>'
-          );
-        }
-      })
-      .appendTo($tools);
+    //                     var optnameii = r.question.option[z];
+    //                     if (
+    //                       optnameii.indexOf(".jpg") != -1 ||
+    //                       optnameii.indexOf(".png") != -1
+    //                     ) {
+    //                       optnameii =
+    //                         "<img class='see' src='" +
+    //                         imagePath +
+    //                         r.question.option[z] +
+    //                         "'>";
+    //                     }
+    //                     //console.log(optnameii);
+    //                     $('<div class="question-title"></div>')
+    //                       .html(optnameii)
+    //                       .appendTo($opts);
+    //                   }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //           $opts.appendTo($div);
+    //           $('<div class="clear"></div>').appendTo($div);
+    //           $("#replaceList").append($div);
+    //         }
+    //       }
+    //     });
+    //     $("#replaceQuestion").show();
+    //     if ($("#replaceList").is(":empty")) {
+    //       $("#replaceList").html(
+    //         '<div style="text-align: center; line-height: 300px;">No, similar questions available.</div>'
+    //       );
+    //     }
+    //   })
+    //   .appendTo($tools);
 
     $('<a href="javascript:void(0)"></a>')
       .html("Remove")

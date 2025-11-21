@@ -38,6 +38,11 @@
 	padding:0px;
 	outline:none;
 }
+
+
+
+
+
 html, body {
 font-family:Hultog;
 background: #f5f5f5;
@@ -54,7 +59,12 @@ background: -o-linear-gradient(-45deg,  #f4f4f4 0%,#ffffff 100%); /* Opera 11.10
 background: -ms-linear-gradient(-45deg,  #f4f4f4 0%,#ffffff 100%); /* IE10+ */
 /* background: linear-gradient(135deg,  #f4f4f4 0%,#ffffff 100%); */ /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-overflow: hidden;
+/* overflow: hidden; */
+
+	border: 2px solid red;
+background-image: url(../img/background_img.jpg);
+background-size: cover;
+border: 2px solid red;
 }
 #wrapper {
 height: 100%;
@@ -73,6 +83,9 @@ border: 4px #eee solid;
 background: #FFF;
 overflow-y: auto;
 position: relative;
+	border: 2px solid red;
+background-image: url(../img/background_img.jpg);
+background-size: cover;
 }
 .startScreen {
 width: 850px;
@@ -84,18 +97,21 @@ height: 100%;
 overflow-y: auto;
 position: relative;
 /* border-right: 4px #eee solid; */
-background-color: #ebeced;  background-image: url(images/radial_bg.png);  background-position: center center;  background-repeat: no-repeat;  
-background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FFFFFF), to(#ebeced));  
+/* background-color: #ebeced;  background-image: url(images/radial_bg.png);  background-position: center center;  background-repeat: no-repeat;   */
+/* background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FFFFFF), to(#ebeced));  
 background: -webkit-radial-gradient(circle, #FFFFFF, #ebeced);  
 background: -moz-radial-gradient(circle, #ffffff, #ebeced);  
-background: -ms-radial-gradient(circle, #ffffff, #ebeced);
+background: -ms-radial-gradient(circle, #ffffff, #ebeced); */
+
 }
+
 
 #logo{
 width: 200px;
 text-align: center;
 margin:60px auto;
 }
+
 
 
 .clear{  clear:both;   margin: 0px;  float: none !important;}
@@ -598,9 +614,9 @@ margin-top: -2px;height: 12px;
 }
 .marksPreview {
 width: 50px;
-/* position: absolute; */
-/* right: 12px; */
-/* top: 5px; */
+position: absolute;
+right: 12px;
+top: 5px;
 text-align: center;
 padding: 3px;
 background: rgb(255, 255, 255);
@@ -1072,6 +1088,7 @@ padding: 3px;
 background: rgb(255, 255, 255);
 margin-top: 2px;
 height: 20px;
+display: block !important;
 }
 .marksDiv {
 width: 60px;

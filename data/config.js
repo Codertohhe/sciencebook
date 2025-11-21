@@ -2,9 +2,9 @@
 const appdb = {
   config: {
     subject: "",
-    class: "Class 1",
+    class: "Class 3",
     id: "riz_569",
-    totalPages: 22,
+    totalPages: 144,
     bookWidth: 1259,
     bookHeight: 1646,
     prePages: [
@@ -20,33 +20,33 @@ const appdb = {
       link: "content",
       data: [
         {
-          page: 3,
-          title: "1. One Stormy Day",
+          page: 7,
+          title: "1. Living and Non-living Things",
         },
         {
-          page: 12,
-          title: "2. The Talking Cave",
+          page: 16,
+          title: "2. Parts of a Plant",
         },
       ],
     },
     Animations: {
       icon: "fa-film",
       menu: "Animations",
-      link: "video",
+      link: "iframe",
       data: [
         {
-          path: "resources/animations/ch_1_1.mp4",
-          title: "One Stormy Day",
+          path: "https://drive.google.com/file/d/1YldDrx-HJftgoJ7PxzZvMXlyFz1lD9qE/preview",
+          title: "Living and Non-living Things",
           size: "850x480",
-          page: 3,
+          page: 7,
           chapter: "Chapter 1",
         },
 
         {
           path: "resources/animations/ch_2_1.mp4",
-          title: "The Talking Cave",
+          title: "Parts of a Plant",
           size: "850x480",
-          page: 12,
+          page: 16,
           chapter: "Chapter 2",
         },
       ],
@@ -57,29 +57,53 @@ const appdb = {
       link: "iframe",
       data: [
         {
-          path: "resources/interactivities/tf/chap_1_tf_1.html",
-          title: "Chapter 1, Activity A",
-          size: "1024x800",
-          page: 6,
+          path: "resources/interactivities/fib/chap_1_fib_1.html",
+          title: "Chapter 1, Activity B",
+          size: "1024x600",
+          page: 11,
         },
         {
-          path: "resources/interactivities/tf/chap_1_tf_2.html",
-          title: "Chapter 1, Activity B",
-          size: "1024x720",
-          page: 6,
+          path: "resources/interactivities/tf/chap_1_tf_1.html",
+          title: "Chapter 1, Activity C",
+          size: "1024x730",
+          page: 11,
         },
 
         {
-          path: "resources/interactivities/mtf/chap_2_mtf_1.html",
-          title: "Chapter 2, Activity A",
-          size: "1024x700",
-          page: 14,
+          path: "resources/interactivities/fib/chap_1_fib_2.html",
+          title: "Chapter 1, Activity F",
+          size: "1024x550",
+          page: 12,
         },
         {
-          path: "resources/interactivities/fib/chap_2_fib_2.html",
-          title: "Chapter 2, Activity B",
+          path: "resources/interactivities/satq/chap_1_satq_1.html",
+          title: "Chapter 1, Activity G",
           size: "1024x750",
-          page: 14,
+          page: 12,
+        },
+        {
+          path: "resources/interactivities/mtf/chap_2_mtf_1.html",
+          title: "Chapter 2, Activity B",
+          size: "1024x630",
+          page: 22,
+        },
+        {
+          path: "resources/interactivities/fib/chap_2_fib_1.html",
+          title: "Chapter 2, Activity C",
+          size: "1024x580",
+          page: 23,
+        },
+        {
+          path: "resources/interactivities/satq/chap_2_satq_1.html",
+          title: "Chapter 2, Activity E",
+          size: "1024x750",
+          page: 23,
+        },
+        {
+          path: "resources/interactivities/satq/chap_2_satq_2.html",
+          title: "Chapter 2, Activity F",
+          size: "1024x750",
+          page: 23,
         },
       ],
     },
@@ -92,7 +116,7 @@ const appdb = {
         {
           path: "resources/test_generator/index.html",
           title: "Test Generator",
-          size: "1100x700",
+          size: "1380x900",
           //page: 00,
         },
       ],

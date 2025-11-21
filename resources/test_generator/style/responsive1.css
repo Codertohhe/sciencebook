@@ -33,15 +33,54 @@
   .TG_bg {
     /* bottom: 230px; */
   }
+  .yogesh-div{
+    max-width: 80%;
+  }
+    .level3-navigation {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+
+  .level3_buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+  }
+  .auto_level-buttons{
+    display: flex;
+  }
+  .toolbars_preview{
+    width: 100%;
+    display: flex;
+  }
+  .top_checkbox{
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .finalise_btns{
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
+  .startScreen{
+    width: 100% !important;
+  }
   .tgMainTitle {
     font-size: 16px;
   }
   .TG_bg {
     width: 100%;
     /* background-size: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  
+    /* margin-left: 2rem; */
   }
 
   h1#topTitle {
@@ -73,11 +112,77 @@
   input[type="radio"] {
     margin-left: 12px;
   }
+  .mxio select{
+    width: 80%;
+    /* margin-right: 2rem; */
+    
+  }
+  .mxio {
+    margin-right: 1rem;
+  }
+  .marksper {
+    width: 50%;
+  }
+  .toolbars_preview {
+    /* border: 2px solid red ; */
+    /* height: 5rem; */
+  }
+  .toolbars{
+    /* height: 5rem; */
+            display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  }
+  .auto_level-button{
+    display: flex;
+  }
+  .insertNewQuestion-container {
+    width: 100% !important;
+    /* height: 75%; */
+    height: auto;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: -310px; */
+    /* margin-left: -309px; */
+    overflow: hidden;
+    border: 1px solid #989a9d;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.59);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.59);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.59);
+    color: #000;
+    padding: 0 !important;
+}
+.form-insertion select, input, textarea{
+  width: 100%;
+          color: #000 !important;
+}
+    #previewHTML .options, #previewHTML .question-answer{
+      margin-left: 0 !important;
+    }
+
+    
+#level2 .question-title.rx-editable,
+#auto-level-2 .question-title.rx-editable {
+  padding-left: 8%;
+  font-size: 1.8rem;
+  width: 100%;
+}
+.auto-seelctquestions {
+  margin-left: -18px !important;
+}
 }
 
 @media (max-width: 850px) {
   .startScreen {
-    width: 100%;
+    width: 40%;
   }
 
   .startScreen h1 {
@@ -94,6 +199,7 @@
   }
   div#explorer {
     width: 100%;
+    padding-bottom: 10rem;
   }
   #collectionList {
     width: 100%;
@@ -106,6 +212,7 @@
     width: 100%;
     clear: both;
     float: none;
+    overflow: auto;
   }
 
   .level1-header {
@@ -185,6 +292,8 @@
     top: 0px;
     padding: 5px 0px;
     text-align: left;
+            display: flex ;
+        flex-direction: column;
   }
 
   #pdfPreview .options {
@@ -201,13 +310,13 @@
 
   .marksDiv {
     position: absolute;
-    left: auto;
+    /* left: auto; */
     top: auto;
     background: transparent;
-    bottom: 0px;
+    bottom: 1rem;
     height: 46px;
     right: 9px;
-    z-index: 1;
+    /* z-index: 1; */
   }
   #pdfPreview #userInfo > div {
     float: none !important;
@@ -224,11 +333,21 @@
     /* position: relative; */
     bottom: 290px;
     /* margin: auto; */
-    margin-left: -180px;
+    /* margin-left: -180px; */
   }
   .CiE-txt.tgTitle {
     font-size: 18px;
   }
+
+  .auto-tabs-section{
+  width: 100%;
+}
+.auto-tabs-wrapper{
+  flex-direction: row;
+}
+.level1-header .auto-tabs-wrapper {
+  flex-direction: row !important;
+}
 }
 @media (max-width: 640px) {
   .level1-header {
@@ -261,15 +380,22 @@
   .main {
     width: 40% !important;
   }
+  .auto-testpaper-details .checkbox{
+    color:  red !important;
+  }
 }
 
 @media screen and (max-width: 460px) {
   .auto-tabs-section {
-    width: 100%;
+    /* width: 100%; */
     clear: both;
     float: none !important;
     text-align: center !important;
     height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 0;
   }
   .auto-topsection {
     display: none !important;
@@ -281,7 +407,8 @@
     float: none !important;
     text-align: center;
     margin: auto;
-    width: 100% !important;
+    /* width: 100% !important; */
+    /* margin-top: -5rem; */
   }
 
   .top_checkbox {
@@ -291,6 +418,26 @@
   .toolbars_preview {
     padding: 0 !important;
   }
+  .auto-tabs-wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    /* border: 2px solid red; */
+    padding: 0;
+  }
+.auto-top-bar .cntiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yogesh-div{
+  max-width: 100%;
+}
+.question-title.rx-editable{
+  padding-left: 2rem;
+}
 }
 
 @media (max-width: 1920px) {
@@ -510,7 +657,7 @@
   }
 
   #explorer .info_btn {
-    padding: 5px;
+    /* padding: 5px; */
     margin: 0px 4px;
   }
 
@@ -525,7 +672,7 @@
   #level2 .finalise_btns .info_btn,
   #auto-level-2 .finalise_btns .info_btn {
     font-size: 12px;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
   }
 
   #auto-level-2 #pdfPreview #userInfo input,
@@ -674,6 +821,7 @@
 
   div#sContainIn {
     clear: both;
+    margin-bottom: 10rem;
   }
 
   div#userInfo > table {
@@ -708,14 +856,18 @@
   }
 
   #toolbars {
-    position: static !important;
+    /* position: static !important; */
     display: block;
-    margin: 0px 5px !important;
+    /* margin: 0px 5px !important; */
   }
 
   #toolbars {
     height: auto !important;
-    /* padding: 21px 0px; */
+    padding: 21px 0px;
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
   }
 
   #topHeader .auto-tabs-section {
@@ -959,6 +1111,7 @@
 
   .book_name {
     width: auto;
+    margin-top: 1rem;
   }
   .auto-topsection {
     width: auto;
@@ -970,6 +1123,11 @@
   .auto_level-buttons {
     width: 100%;
     height: auto !important;
+    display: flex !important;
+    justify-content: center;
+    margin: 0 !important;
+    gap: 0 !important;
+    background-color: #0497a7;
   }
 
   .auto_level-buttons button {
@@ -1002,11 +1160,70 @@
 @media screen and (max-width: 540px) {
   .level3-navigation {
     height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
   }
 
   .level3_buttons {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+    
   }
+  #level2 div#userInfo,
+#auto-level-2 div#userInfo {
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100% !important;
+  background: #75e1af !important;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.18);
+  border-radius: 20px;
+  border: 2px #00bcd4 solid;
+}
+    #stats {
+        height: auto;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #stats .info_btn{
+      display: inline-block !important;
+      /* border: 2px solid red; */
+      width: 100%;
+      margin-bottom: 1rem !important;
+      padding: 1.5rem 1rem !important;
+    }
+    .marksPreview {
+    width: 100%;
+    position: absolute;
+    right: -44px;
+    top: 0;
+    text-align: center;
+    padding: 3px 0px;
+    background: rgb(255, 255, 255);
+    margin-top: 2px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+.auto-toptitle{
+  flex-direction: column;
+}
+.auto-tabs-section{
+  width: 100%;
+}
+.auto-tabs-wrapper{
+  flex-direction: row;
+}
+.level1-header .auto-tabs-wrapper {
+  flex-direction: row !important;
+}
 }
 
 @media screen and (max-width: 1140px) {
@@ -1034,5 +1251,8 @@
 @media screen and (max-width: 440px) {
   #topHeader {
     /* height: 60% !important; */
+  }
+  .auto_level-button{
+    display: flex;
   }
 }

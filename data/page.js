@@ -1,67 +1,251 @@
 const PAGES_LINKING = {
-  /* ch 1 */
-  3: [
+  // Animations
+  // /* ch 1 */
+
+  7: [
     {
-      x: 74,
-      y: 8,
+      x: 90,
+      y: 17,
       title: "Animation",
-      icon: "img/icons/animation.gif",
-      link: "resources/animations/ch_1_1.mp4",
+      icon: "img/icons/animation.png",
+      link: "https://drive.google.com/file/d/1YldDrx-HJftgoJ7PxzZvMXlyFz1lD9qE/preview",
       type: "video",
       size: "850x480",
     },
   ],
-  12: [
+  16: [
     {
-      x: 74,
-      y: 8,
+      x: 77,
+      y: 17,
       title: "Animation",
-      icon: "img/icons/animation.gif",
+      icon: "img/icons/animation.png",
       link: "resources/animations/ch_2_1.mp4",
       type: "video",
       size: "850x480",
     },
   ],
 
-  6: [
+  // Interactivities
+  /* ch 1 */
+  11: [
+    // {
+    //   x: 90,
+    //   y: 39,
+    //   title: "Interactivity",
+    //   icon: "img/icons/interactivites.gif",
+    //   link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //   type: "iframe",
+    //   size: "1024x800",
+    // },
     {
-      x: 92,
-      y: 12,
+      x: 90,
+      y: 61,
+      title: "Interactivity",
+      icon: "img/icons/interactivites.gif",
+      link: "resources/interactivities/fib/chap_1_fib_1.html",
+      type: "iframe",
+      size: "1024x600",
+    },
+    {
+      x: 90,
+      y: 81,
       title: "Interactivity",
       icon: "img/icons/interactivites.gif",
       link: "resources/interactivities/tf/chap_1_tf_1.html",
       type: "iframe",
-      size: "1024x800",
+      size: "1024x730",
     },
+  ],
+
+  12: [
     {
-      x: 92,
-      y: 34,
+      x: 90,
+      y: 62,
       title: "Interactivity",
       icon: "img/icons/interactivites.gif",
-      link: "resources/interactivities/tf/chap_1_tf_2.html",
+      link: "resources/interactivities/fib/chap_1_fib_2.html",
+      type: "iframe",
+      size: "1024x550",
+    },
+    {
+      x: 90,
+      y: 76,
+      title: "Interactivity",
+      icon: "img/icons/interactivites.gif",
+      link: "resources/interactivities/satq/chap_1_satq_1.html",
       type: "iframe",
       size: "1024x720",
     },
-    
   ],
-  14: [
+  /* ch 2 */
+  22: [
     {
       x: 92,
-      y: 47,
+      y: 51,
       title: "Interactivity",
       icon: "img/icons/interactivites.gif",
       link: "resources/interactivities/mtf/chap_2_mtf_1.html",
       type: "iframe",
-      size: "1024x700",
+      size: "1024x630",
+    },
+  ],
+  23: [
+    {
+      x: 92,
+      y: 13,
+      title: "Interactivity",
+      icon: "img/icons/interactivites.gif",
+      link: "resources/interactivities/fib/chap_2_fib_1.html",
+      type: "iframe",
+      size: "1024x580",
     },
     {
       x: 92,
-      y: 77,
+      y: 30,
       title: "Interactivity",
       icon: "img/icons/interactivites.gif",
-      link: "resources/interactivities/fib/chap_2_fib_2.html",
+      link: "resources/interactivities/satq/chap_2_satq_1.html",
       type: "iframe",
       size: "1024x750",
     },
+    {
+      x: 92,
+      y: 38,
+      title: "Interactivity",
+      icon: "img/icons/interactivites.gif",
+      link: "resources/interactivities/satq/chap_2_satq_2.html",
+      type: "iframe",
+      size: "1024x750",
+    },
+  ],
+  /* ch 3 */
+  31: [
+    // {
+    //   x: 90,
+    //   y: 25,
+    //   title: "Interactivity",
+    //   icon: "img/icons/interactivites.gif",
+    //   link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //   type: "iframe",
+    //   size: "1024x800",
+    // },
+    // {
+    //   x: 72,
+    //   y: 58,
+    //   title: "Interactivity",
+    //   icon: "img/icons/interactivites.gif",
+    //   link: "resources/interactivities/tf/chap_1_tf_2.html",
+    //   type: "iframe",
+    //   size: "1024x720",
+    // },
+    // {
+    //   x: 73,
+    //   y: 71,
+    //   title: "Interactivity",
+    //   icon: "img/icons/interactivites.gif",
+    //   link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //   type: "iframe",
+    //   size: "1024x800",
+    // },
+    // {
+    //   x: 70,
+    //   y: 76,
+    //   title: "Interactivity",
+    //   icon: "img/icons/interactivites.gif",
+    //   link: "resources/interactivities/tf/chap_1_tf_2.html",
+    //   type: "iframe",
+    //   size: "1024x720",
+    // },
+  ],
+  /* ch 4 */
+  39: [
+    //   {
+    //     x: 94,
+    //     y: 45,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/mtf/chap_2_mtf_1.html",
+    //     type: "iframe",
+    //     size: "1024x700",
+    //   },
+    //   {
+    //     x: 75,
+    //     y: 72,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/fib/chap_2_fib_2.html",
+    //     type: "iframe",
+    //     size: "1024x750",
+    //   },
+    // ],
+    // 40: [
+    //   {
+    //     x: 90,
+    //     y: 7,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //     type: "iframe",
+    //     size: "1024x800",
+    //   },
+    //   {
+    //     x: 90,
+    //     y: 33,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //     type: "iframe",
+    //     size: "1024x800",
+    //   },
+    //   {
+    //     x: 90,
+    //     y: 57,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_2.html",
+    //     type: "iframe",
+    //     size: "1024x720",
+    //   },
+    //   {
+    //     x: 90,
+    //     y: 75,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_2.html",
+    //     type: "iframe",
+    //     size: "1024x720",
+    //   },
+  ],
+  /* ch 5 */
+  51: [
+    //   {
+    //     x: 93,
+    //     y: 29,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //     type: "iframe",
+    //     size: "1024x800",
+    //   },
+    //   {
+    //     x: 93,
+    //     y: 71,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_2.html",
+    //     type: "iframe",
+    //     size: "1024x720",
+    //   },
+    // ],
+    // 53: [
+    //   {
+    //     x: 90,
+    //     y: 7,
+    //     title: "Interactivity",
+    //     icon: "img/icons/interactivites.gif",
+    //     link: "resources/interactivities/tf/chap_1_tf_1.html",
+    //     type: "iframe",
+    //     size: "1024x800",
+    //   },
   ],
 };
